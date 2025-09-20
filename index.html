@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>English City · Day 1</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <h1>English City · Day 1</h1>
+        <p class="tagline">
+          Level 1 orientation for the newest resident. Dry humor included at no
+          extra cost.
+        </p>
+      </header>
+
+      <section class="card" id="overview">
+        <h2>Overview</h2>
+        <p class="mono">Phases: Neighborhood Exploration → Neighbor Challenge</p>
+        <p class="mono">
+          Exploration Focus: 1. Corner Store (idiom + vocab) · 2. Street Mural
+          (grammar) · 3. Community Garden (sentence pattern)
+        </p>
+        <p>Core rules:</p>
+        <ul>
+          <li>Use clear headings.</li>
+          <li>Keep the wit dry.</li>
+          <li>Interact early and often.</li>
+          <li>Images unlock only when you type the command <code>image</code>.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="exploration">
+        <h2>Neighborhood Exploration</h2>
+        <p class="scene-intro">
+          You’ve just moved to a new city. Your apartment: half-unpacked boxes,
+          Ikea furniture, and neighbors playing music a bit too loud. But, the
+          city is alive outside, and calling for exploration!
+        </p>
+        <p>Pick where to wander first. Each stop unlocks new language loot.</p>
+        <div class="choices" id="exploration-choices">
+          <button type="button" class="choice" data-scene="corner">
+            🛒 Corner Store
+          </button>
+          <button type="button" class="choice" data-scene="mural">
+            🎨 Street Mural
+          </button>
+          <button type="button" class="choice" data-scene="garden">
+            🌱 Community Garden
+          </button>
+        </div>
+        <div id="scene-container" aria-live="polite"></div>
+      </section>
+
+      <section class="card hidden" id="neighbor-challenge">
+        <h2>Neighbor Challenge</h2>
+        <p>
+          Your neighbor, an English teacher, is waiting at your door with
+          questions. Finish every neighborhood stop to unlock this final
+          showdown.
+        </p>
+        <div id="neighbor-content"></div>
+      </section>
+
+      <section class="card hidden" id="wrap-up">
+        <h2>Wrap-up</h2>
+        <div id="wrap-summary"></div>
+        <div id="report"></div>
+        <p class="closing">
+          You&apos;ve completed Day 1! If you have any feedback, send it to
+          <a href="mailto:Luke@lukepriddy.com">Luke@lukepriddy.com</a>. Day 2 is
+          still being developed; check back soon.
+        </p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
