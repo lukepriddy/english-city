@@ -7,74 +7,352 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="page">
-      <header class="hero">
+    <header class="site-header">
+      <div class="brand">
         <h1>English City · Day 1</h1>
-        <p class="tagline">
-          Level 1 orientation for the newest resident. Dry humor included at no
-          extra cost.
-        </p>
-      </header>
+        <p class="tagline">Level 1 orientation for the newest resident.</p>
+      </div>
+      <nav class="site-nav" aria-label="Page sections">
+        <a href="#overview">Overview</a>
+        <a href="#exploration">Exploration</a>
+        <a href="#neighbor-challenge">Neighbor Challenge</a>
+        <a href="#wrap-up">Wrap-up</a>
+      </nav>
+    </header>
 
-      <section class="card" id="overview">
+    <main class="layout">
+      <section id="overview" class="panel">
         <h2>Overview</h2>
-        <p class="mono">Phases: Neighborhood Exploration → Neighbor Challenge</p>
-        <p class="mono">
-          Exploration Focus: 1. Corner Store (idiom + vocab) · 2. Street Mural
-          (grammar) · 3. Community Garden (sentence pattern)
+        <p class="lead">
+          You are English City, an interactive English-learning game. Guide the
+          user through Level 1 with grounded, dry humor. The player’s choices
+          shape the experience.
         </p>
-        <p>Core rules:</p>
-        <ul>
-          <li>Use clear headings.</li>
-          <li>Keep the wit dry.</li>
-          <li>Interact early and often.</li>
-          <li>Images unlock only when you type the command <code>image</code>.</li>
+        <ul class="overview-list">
+          <li>Phases: Neighborhood Exploration followed by Neighbor Challenge.</li>
+          <li>
+            Exploration Focus:
+            <ol>
+              <li>Corner Store (idiom + vocabulary)</li>
+              <li>Street Mural (grammar: participle clauses)</li>
+              <li>Community Garden (sentence pattern: “Even though”)</li>
+            </ol>
+          </li>
+          <li>Use clear headings, keep the wit dry, and prompt interaction.</li>
+          <li>Images are user-initiated with the <code>image</code> command.</li>
         </ul>
       </section>
 
-      <section class="card" id="exploration">
+      <section id="exploration" class="panel">
         <h2>Neighborhood Exploration</h2>
         <p class="scene-intro">
-          You’ve just moved to a new city. Your apartment: half-unpacked boxes,
-          Ikea furniture, and neighbors playing music a bit too loud. But, the
-          city is alive outside, and calling for exploration!
+          “You’ve just moved to a new city. Your apartment: half-unpacked boxes,
+          Ikea furniture, and neighbors playing music a bit too loud. But the city
+          is alive outside, and calling for exploration!”
         </p>
-        <p>Pick where to wander first. Each stop unlocks new language loot.</p>
-        <div class="choices" id="exploration-choices">
-          <button type="button" class="choice" data-scene="corner">
-            🛒 Corner Store
-          </button>
-          <button type="button" class="choice" data-scene="mural">
-            🎨 Street Mural
-          </button>
-          <button type="button" class="choice" data-scene="garden">
-            🌱 Community Garden
-          </button>
+        <p class="scene-note">
+          Players choose the visit order. Each card below holds the day-one copy,
+          image slots, and placeholders for the upcoming chat interface.
+        </p>
+
+        <div class="scene-grid">
+          <article class="scene" id="corner-store">
+            <header>
+              <h3>🛒 Corner Store</h3>
+              <p class="scene-focus">Focus: Idiom + Vocabulary</p>
+            </header>
+            <section class="scene-copy">
+              <p>
+                The shop owner is on the phone as the player walks in: “I had to
+                pay through the nose for these security cameras and they’re already
+                broken! Yeah, I know... Well, call me back then! Bye.”
+              </p>
+              <p class="prompt">Prompt: “Write one sentence using this idiom.”</p>
+              <div class="language-callout">
+                <h4>Vocabulary spotlight</h4>
+                <p><strong>Inadvertent</strong></p>
+                <ul>
+                  <li>inadvertent (adj)</li>
+                  <li>inadvertently (adv)</li>
+                  <li>inadvertence (n)</li>
+                </ul>
+              </div>
+              <div class="quiz">
+                <h4>Quiz</h4>
+                <p>
+                  Pick the sentence that uses “inadvertent” unnaturally or
+                  awkwardly:
+                </p>
+                <ol>
+                  <li>She apologized for the inadvertent error in the report.</li>
+                  <li>I made an inadvertent comment that offended him.</li>
+                  <li class="answer-key">
+                    Her inadvertent success in the tech industry shocked everyone.
+                  </li>
+                  <li>He inadvertently locked himself out of the house.</li>
+                </ol>
+              </div>
+              <p class="interaction-prompt">
+                Interaction: The shop owner, stressed and fighting the cash
+                register drawer, asks, “Hey... I just get so worked up. What could
+                I do to stay calm throughout the day?” Challenge the user to offer
+                advice using the new idiom or vocabulary.
+              </p>
+            </section>
+
+            <section class="scene-assets" aria-label="Corner Store characters">
+              <h4>Character frames</h4>
+              <div class="frame-strip">
+                <figure class="frame">
+                  <img src="images/corner-store-person-1.png" alt="Corner store owner looking frustrated" loading="lazy" />
+                  <figcaption>Owner · intro pose</figcaption>
+                </figure>
+                <figure class="frame">
+                  <img src="images/corner-store-person-2.png" alt="Owner examining broken security camera" loading="lazy" />
+                  <figcaption>Owner · mid-call</figcaption>
+                </figure>
+                <figure class="frame">
+                  <img src="images/corner-store-person-3.png" alt="Owner calming down behind the counter" loading="lazy" />
+                  <figcaption>Owner · calming down</figcaption>
+                </figure>
+              </div>
+              <p class="frame-note">
+                Replace the image sources with the real artwork once it’s uploaded
+                to the repository.
+              </p>
+            </section>
+
+            <section class="chat-placeholder" aria-label="Corner Store chat stub">
+              <h4>Planned chat interface</h4>
+              <p>
+                This container will host the interactive chat for the Corner Store
+                sequence. Hook AI responses here in a future step.
+              </p>
+              <button type="button" class="stub-button" data-scene="corner">
+                Prepare Corner Store flow
+              </button>
+            </section>
+          </article>
+
+          <article class="scene" id="street-mural">
+            <header>
+              <h3>🎨 Street Mural</h3>
+              <p class="scene-focus">Focus: Grammar · Participle Clauses</p>
+            </header>
+            <section class="scene-copy">
+              <p>
+                The artist says, “Stepping back from her masterpiece, the artist
+                notices that she has started talking about herself in the third
+                person.” Explain that this is a participle clause using a present
+                or past participle to add information without a new sentence.
+              </p>
+              <div class="challenge">
+                <h4>Challenge 1</h4>
+                <p>
+                  Invite the learner to pick a favorite example from the list of
+                  five participle-clause sentences:
+                </p>
+                <ol>
+                  <li>Running late for the meeting, Marcus dashed across the plaza without his usual coffee stop.</li>
+                  <li>Built in the 1800s, the theater in Charleston still hosts weekly jazz performances.</li>
+                  <li>Walking along the riverbank, Naomi spotted a small turtle sunbathing on a log.</li>
+                  <li>Forgotten by most locals, the old train tunnel behind Ridgeway Park became a hangout for urban explorers.</li>
+                  <li>Shivering in the cold rain, Luca waited patiently outside the record store for the new release.</li>
+                </ol>
+              </div>
+              <div class="challenge">
+                <h4>Challenge 2</h4>
+                <p>Prompt the user to write one sentence using a participle clause.</p>
+              </div>
+              <p class="interaction-prompt">
+                Interaction: The artist asks, “They say you lose perspective when
+                you’re too close to something. Could you give me an idea for how I
+                could make this mural more interesting?” Encourage the learner to
+                reply with a suggestion that uses a participle clause.
+              </p>
+            </section>
+
+            <section class="scene-assets" aria-label="Street Mural characters">
+              <h4>Character frames</h4>
+              <div class="frame-strip">
+                <figure class="frame">
+                  <img src="images/street-mural-person-1.png" alt="Mural artist appraising the wall" loading="lazy" />
+                  <figcaption>Artist · wide shot</figcaption>
+                </figure>
+                <figure class="frame">
+                  <img src="images/street-mural-person-2.png" alt="Artist sketching details" loading="lazy" />
+                  <figcaption>Artist · sketching</figcaption>
+                </figure>
+                <figure class="frame">
+                  <img src="images/street-mural-person-3.png" alt="Artist smiling with paint-covered hands" loading="lazy" />
+                  <figcaption>Artist · close-up</figcaption>
+                </figure>
+              </div>
+              <p class="frame-note">Swap in your final images when they’re ready.</p>
+            </section>
+
+            <section class="chat-placeholder" aria-label="Street Mural chat stub">
+              <h4>Planned chat interface</h4>
+              <p>
+                Use this placeholder to wire the mural dialogue once the chat
+                system is ready.
+              </p>
+              <button type="button" class="stub-button" data-scene="mural">
+                Prepare Street Mural flow
+              </button>
+            </section>
+          </article>
+
+          <article class="scene" id="community-garden">
+            <header>
+              <h3>🌱 Community Garden</h3>
+              <p class="scene-focus">Focus: Sentence Pattern · “Even though”</p>
+            </header>
+            <section class="scene-copy">
+              <p>
+                A gardener explains, “Even though the soil is dry, these herbs
+                thrive. I could also say: These herbs thrive even though the soil
+                is dry.” Clarify that “even though” connects two contrasting
+                ideas and that a comma follows when the clause leads the sentence.
+              </p>
+              <div class="challenge">
+                <h4>Challenge 1</h4>
+                <p>Prompt the user to write a sentence using “even though.”</p>
+              </div>
+              <div class="challenge">
+                <h4>Challenge 2</h4>
+                <p>
+                  Ask the learner to fix the sentence: “We decided to turn the AC
+                  on, even though we were really hot.”
+                </p>
+              </div>
+              <p class="interaction-prompt">
+                Interaction: The gardener wants advice on getting more volunteers
+                for the garden. Request a practical tip and challenge the learner
+                to use “even though” in the response.
+              </p>
+            </section>
+
+            <section class="scene-assets" aria-label="Community Garden characters">
+              <h4>Character frames</h4>
+              <div class="frame-strip">
+                <figure class="frame">
+                  <img src="images/community-garden-person-1.png" alt="Gardener checking herb beds" loading="lazy" />
+                  <figcaption>Gardener · overview</figcaption>
+                </figure>
+                <figure class="frame">
+                  <img src="images/community-garden-person-2.png" alt="Gardener watering plants" loading="lazy" />
+                  <figcaption>Gardener · watering</figcaption>
+                </figure>
+                <figure class="frame">
+                  <img src="images/community-garden-person-3.png" alt="Gardener greeting volunteers" loading="lazy" />
+                  <figcaption>Gardener · greeting</figcaption>
+                </figure>
+              </div>
+              <p class="frame-note">Update the paths once the garden art is uploaded.</p>
+            </section>
+
+            <section class="chat-placeholder" aria-label="Community Garden chat stub">
+              <h4>Planned chat interface</h4>
+              <p>
+                Stage the volunteer conversation here. The stub keeps spacing and
+                styling ready for the AI-powered exchange.
+              </p>
+              <button type="button" class="stub-button" data-scene="garden">
+                Prepare Community Garden flow
+              </button>
+            </section>
+          </article>
         </div>
-        <div id="scene-container" aria-live="polite"></div>
       </section>
 
-      <section class="card hidden" id="neighbor-challenge">
+      <section id="neighbor-challenge" class="panel">
         <h2>Neighbor Challenge</h2>
         <p>
-          Your neighbor, an English teacher, is waiting at your door with
-          questions. Finish every neighborhood stop to unlock this final
-          showdown.
+          After finishing the exploration, the player returns home. Their
+          neighbor, an English teacher named Albert, is waiting with questions.
         </p>
-        <div id="neighbor-content"></div>
+        <div class="neighbor-card">
+          <p class="neighbor-dialogue">
+            “Hey, neighbor. I heard you just moved in. I’m Albert, your neighbor
+            from next door. Some people say I’m a bit overbearing, but I disagree!
+            Listen, before I let you go, tell me what happened out there! I don’t
+            get out much. Who did you meet? What did you talk about? Learn
+            anything?”
+          </p>
+          <ul class="neighbor-requirements">
+            <li>Reply in 100+ words.</li>
+            <li>Use at least two items learned during the day.</li>
+            <li>Reference all three interactions.</li>
+          </ul>
+          <div class="neighbor-reminder">
+            <h3>You glance down at your notebook:</h3>
+            <ol>
+              <li>Pay through the nose (idiom)</li>
+              <li>Inadvertent (vocabulary)</li>
+              <li>“Stepping back, the artist...” (present and past participles)</li>
+              <li>“Even though...” (pattern)</li>
+            </ol>
+          </div>
+          <section class="scene-assets" aria-label="Neighbor character frames">
+            <h4>Character frames</h4>
+            <div class="frame-strip">
+              <figure class="frame">
+                <img src="images/neighbor-person-1.png" alt="Neighbor Albert waving hello" loading="lazy" />
+                <figcaption>Albert · doorway</figcaption>
+              </figure>
+              <figure class="frame">
+                <img src="images/neighbor-person-2.png" alt="Albert leaning on the doorframe with a notepad" loading="lazy" />
+                <figcaption>Albert · inquisitive</figcaption>
+              </figure>
+              <figure class="frame">
+                <img src="images/neighbor-person-3.png" alt="Albert giving a thumbs-up" loading="lazy" />
+                <figcaption>Albert · approval</figcaption>
+              </figure>
+            </div>
+            <p class="frame-note">
+              Store the neighbor portraits in <code>images/</code> with these file
+              names or update the markup to match your assets.
+            </p>
+          </section>
+          <section class="chat-placeholder" aria-label="Neighbor challenge chat stub">
+            <h4>Planned chat interface</h4>
+            <p>
+              Insert the final assessment chat here. This block keeps structure for
+              the AI-driven wrap-up exchange.
+            </p>
+            <button type="button" class="stub-button" data-scene="neighbor">
+              Prepare Neighbor Challenge flow
+            </button>
+          </section>
+        </div>
       </section>
 
-      <section class="card hidden" id="wrap-up">
+      <section id="wrap-up" class="panel">
         <h2>Wrap-up</h2>
-        <div id="wrap-summary"></div>
-        <div id="report"></div>
+        <p class="wrap-copy">
+          Congratulate the player on completing Day 1. Deliver a Day 1 report with
+          points for integration and creativity. Reiterate strengths and provide
+          three to four specific improvement tips. Note errors or unnatural
+          phrasing using the format: You said "..." Instead, you could say,
+          "...".
+        </p>
+        <div class="report-placeholder">
+          <h3>Day 1 report placeholder</h3>
+          <p>
+            Use this area to generate the final summary once the interactive logic
+            is in place.
+          </p>
+        </div>
         <p class="closing">
-          You&apos;ve completed Day 1! If you have any feedback, send it to
+          You’ve completed Day 1! If you have any feedback, send it to
           <a href="mailto:Luke@lukepriddy.com">Luke@lukepriddy.com</a>. Day 2 is
-          still being developed; check back soon.
+          still being developed; check back soon. If a user asks for Day 2, reply
+          with “Day 2 is not available yet.”
         </p>
       </section>
     </main>
+
     <script src="script.js"></script>
   </body>
 </html>
