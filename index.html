@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>English City · Day 1</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-live="polite">
+      <div class="device">
+        <div class="device-bezel">
+          <header class="screen-header">
+            <div class="status-bar">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span class="status-brand">English City</span>
+              <span class="status-timer" id="status-timer">Day 1</span>
+            </div>
+            <div class="title-block">
+              <div>
+                <p class="title-eyebrow">Interactive mobile prototype</p>
+                <h1 class="title" id="screen-title">Day 1 Overview</h1>
+              </div>
+              <span class="focus-pill" id="focus-pill">Structure &amp; tone</span>
+            </div>
+            <div class="progress-wrap">
+              <span id="progress-label" class="progress-label">Step 1 of 6</span>
+              <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="progress-fill" id="progress-fill"></div>
+              </div>
+            </div>
+          </header>
+
+          <section class="screen-body">
+            <div class="screen-scroll" id="screen-scroll">
+              <section class="scene-media" id="scene-media" aria-label="Scene artwork"></section>
+              <section class="scene-text" id="scene-text"></section>
+              <section class="task-section" id="task-section"></section>
+              <section class="chat-section" aria-label="Interactive chat">
+                <header class="chat-header">
+                  <h2>Live chat</h2>
+                  <p id="chat-tagline">Check in with your guide.</p>
+                </header>
+                <div class="chat-log" id="chat-log"></div>
+                <form class="chat-form" id="chat-form" autocomplete="off">
+                  <label class="sr-only" for="chat-input">Send a chat message</label>
+                  <input id="chat-input" type="text" placeholder="Type your reply…" />
+                  <button type="submit">Send</button>
+                </form>
+              </section>
+            </div>
+          </section>
+
+          <footer class="screen-footer">
+            <button type="button" id="back-button" class="nav-button nav-button--ghost">
+              Back
+            </button>
+            <button type="button" id="next-button" class="nav-button">
+              Next
+            </button>
+          </footer>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
